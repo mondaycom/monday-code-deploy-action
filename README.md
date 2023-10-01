@@ -5,11 +5,20 @@ This action deploys your project to your monday app
 
 ## `token`
 
-**Required** Monday developer token.
+**Required** 
+
+Monday developer token.
+
+Can be acquired here: https://<your-monday-subdomain>.monday.com/apps/manage/tokens
 
 ## `versionId`
 
-**Required** The app version to push your code into, can be grabbed via running the cli locally.
+**Required** 
+
+The app version to push your code into.
+
+Can be found using `mapps list` command.
+
 
 ## Example usage
 ```
