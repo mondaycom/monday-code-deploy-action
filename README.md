@@ -1,5 +1,5 @@
 # Monday Code deploy action
-This action push your project into monday code hosting.
+This action deploys your project to your monday app
 
 ## Inputs
 
