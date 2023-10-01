@@ -1,0 +1,16 @@
+# action.yml
+name: 'Monday Code Deploy'
+description: 'Deploy app to Monday code'
+inputs:
+  token:
+    description: 'Monday developer token'
+    required: true
+  versionId:
+    description: 'Version ID'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.token }}
+  - ${{ inputs.versionId }}
