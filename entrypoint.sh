@@ -1,3 +1,5 @@
+#!/bin/bash
+
 TOKEN=$1
 APP_VERSION_ID=$2
 
