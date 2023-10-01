@@ -17,7 +17,7 @@ Can be acquired here: https://<your-monday-subdomain>.monday.com/apps/manage/tok
 
 The app version to push your code into.
 
-Can be found using `mapps app-version:list --appId=<ID>` command.
+Can be found using `mapps app-version:list --appId=<ID>` command in your terminal.
 
 The appId can be obtained in the dev center on the app page.
 
