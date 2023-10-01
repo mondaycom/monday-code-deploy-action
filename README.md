@@ -17,14 +17,16 @@ Can be acquired here: https://<your-monday-subdomain>.monday.com/apps/manage/tok
 
 The app version to push your code into.
 
-Can be found using `mapps list` command.
+Can be found using `mapps app-version:list --appId=<ID>` command.
+
+The appId can be obtained in the dev center on the app page.
 
 
 ## Example usage
 ```
-uses: @mondaycom/monday-code-deploy-action
+uses: mondaycom/monday-code-deploy-action
 with:
-  token: 'some-dev-token-from-dev-portal'
+  token: ${{ secrets.MONDAY_TOKEN }}
   versionId: 1234567
 ```
 
