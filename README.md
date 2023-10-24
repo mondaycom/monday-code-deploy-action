@@ -11,15 +11,13 @@ Monday developer token.
 
 Can be acquired here: https://<your-monday-subdomain>.monday.com/apps/manage/tokens
 
-## `versionId`
+## `appId`
 
 **Required** 
 
-The app version to push your code into.
+The app ID to push your code into.
 
-Can be found using `mapps app-version:list --appId=<ID>` command in your terminal.
-
-The appId can be obtained in the dev center on the app page.
+Can be found using `mapps app:list` command in your terminal or in the dev center. This will deploy monday code to the latest draft version of that app (if you also have only live / deprecated versions, this will fail)
 
 
 ## Example usage
@@ -27,6 +25,6 @@ The appId can be obtained in the dev center on the app page.
 uses: mondaycom/monday-code-deploy-action
 with:
   token: ${{ secrets.MONDAY_TOKEN }}
-  versionId: 1234567
+  appId: 1234567
 ```
 

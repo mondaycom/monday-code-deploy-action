@@ -1,7 +1,7 @@
 #!/bin/sh
 
 TOKEN=$1
-APP_VERSION_ID=$2
+APP_ID=$2
 
 mapps init -t $TOKEN
-mapps code:push -i $APP_VERSION_ID
+mapps code:push -a $APP_ID

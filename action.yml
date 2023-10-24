@@ -5,12 +5,12 @@ inputs:
   token:
     description: 'Monday developer token'
     required: true
-  versionId:
-    description: 'Version ID'
+  appId:
+    description: 'The ID of your monday app'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
   - ${{ inputs.token }}
-  - ${{ inputs.versionId }}
+  - ${{ inputs.appId }}
