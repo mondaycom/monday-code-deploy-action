@@ -22,9 +22,23 @@ Can be found using `mapps app:list` command in your terminal or in the dev cente
 
 ## Example usage
 ```
-uses: mondaycom/monday-code-deploy-action
-with:
-  token: ${{ secrets.MONDAY_TOKEN }}
-  appId: 1234567
+name: Deploy to monday code
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy to monday code
+        uses: mondaycom/monday-code-deploy-action@master
+        with:
+          token: ${{ secrets.MONDAY_TOKEN }}
+          appId: 10110073
 ```
 
