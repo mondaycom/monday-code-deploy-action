@@ -19,6 +19,13 @@ The app ID to push your code into.
 
 Can be found using `mapps app:list` command in your terminal or in the dev center. This will deploy monday code to the latest draft version of that app (if you also have only live / deprecated versions, this will fail)
 
+## `envs`
+
+**Optional**
+
+A list of key value environment variables to be set for the CLI operations.
+
+Example: `ENV1=VALUE1 ENV2=VALUE2`
 
 ## Example usage
 ```
@@ -40,5 +47,6 @@ jobs:
         with:
           token: ${{ secrets.MONDAY_TOKEN }}
           appId: 10110073
+          envs:  ENV1=VALUE1 ENV2=VALUE2
 ```
 

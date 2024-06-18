@@ -8,9 +8,13 @@ inputs:
   appId:
     description: 'The ID of your monday app'
     required: true
+  envs:
+    description: 'a list of key value environment variables to be set for the CLI operations'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
   - ${{ inputs.token }}
   - ${{ inputs.appId }}
+  - ${{ inputs.envs }}
