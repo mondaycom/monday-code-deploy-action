@@ -40,5 +40,6 @@ jobs:
         with:
           token: ${{ secrets.MONDAY_TOKEN }}
           appId: 10110073
+          region: eu
 ```
 
