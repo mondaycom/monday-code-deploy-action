@@ -9,7 +9,7 @@ inputs:
     description: 'The ID of your monday app'
     required: true
   region:
-    description: '(beta) The region to deploy the app to (us, eu, au)'
+    description: 'The region to deploy the app to (us, eu, au)'
     required: false
 runs:
   using: 'docker'
