@@ -8,9 +8,13 @@ inputs:
   appId:
     description: 'The ID of your monday app'
     required: true
+  region:
+    description: 'The region to deploy the app to (us, eu, au)'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
   - ${{ inputs.token }}
   - ${{ inputs.appId }}
+  - ${{ inputs.region }}
