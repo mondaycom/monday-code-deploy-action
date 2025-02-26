@@ -5,6 +5,13 @@ REGION=$3
 VERSION_ID=$4
 FORCE=$5
 
+# Validate that at least one of APP_ID or VERSION_ID is provided
+if [ -z "$APP_ID" ] && [ -z "$VERSION_ID" ]; then
+  echo "::error::Either appId or versionId must be provided to deploy the app. Both cannot be empty."
+  exit 1
+fi
+
+
 mapps init -t $TOKEN
 
 # Build command arguments conditionally
