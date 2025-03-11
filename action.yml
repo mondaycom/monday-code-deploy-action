@@ -1,4 +1,3 @@
-# action.yml
 name: 'Monday Code Deploy'
 description: 'Deploy app to Monday code'
 inputs:
@@ -7,9 +6,15 @@ inputs:
     required: true
   appId:
     description: 'The ID of your monday app'
-    required: true
+    required: false
   region:
     description: 'The region to deploy the app to (us, eu, au)'
+    required: false
+  versionId:
+    description: 'The app version ID to deploy to'
+    required: false
+  force:
+    description: 'Force push to the latest version (draft or live)'
     required: false
 runs:
   using: 'docker'
@@ -18,3 +23,5 @@ runs:
   - ${{ inputs.token }}
   - ${{ inputs.appId }}
   - ${{ inputs.region }}
+  - ${{ inputs.versionId }}
+  - ${{ inputs.force }}
