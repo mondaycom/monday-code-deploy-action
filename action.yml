@@ -16,6 +16,12 @@ inputs:
   force:
     description: 'Force push to the latest version (draft or live)'
     required: false
+  client:
+    description: 'Push client side code to cdn'
+    required: false
+  dirPath:
+    description: 'Path to the directory to upload'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,3 +31,5 @@ runs:
   - ${{ inputs.region }}
   - ${{ inputs.versionId }}
   - ${{ inputs.force }}
+  - ${{ inputs.client }}
+  - ${{ inputs.dirPath }}
