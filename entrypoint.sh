@@ -42,9 +42,9 @@ else
 fi
 
 if [ -z "$CLIENT" ]; then
-  FORCE_ARG=""
+  CLIENT_ARG=""
 else
-  FORCE_ARG="-c"
+  CLIENT_ARG="-c"
 fi
 
 if [ -z "$DIR" ]; then
@@ -53,4 +53,4 @@ else
   DIR_ARG="-d $DIR"
 fi
 
-mapps code:push $APP_ID_ARG $REGION_ARG $VERSION_ID_ARG $FORCE_ARG $DIR_ARG
+mapps code:push $APP_ID_ARG $REGION_ARG $VERSION_ID_ARG $FORCE_ARG $DIR_ARG $CLIENT_ARG
