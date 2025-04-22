@@ -4,6 +4,7 @@ APP_ID=$2
 REGION=$3
 VERSION_ID=$4
 FORCE=$5
+CLIENT=$6
 
 # Validate that at least one of APP_ID or VERSION_ID is provided
 if [ -z "$APP_ID" ] && [ -z "$VERSION_ID" ]; then
@@ -37,6 +38,12 @@ if [ -z "$FORCE" ]; then
   FORCE_ARG=""
 else
   FORCE_ARG="-f"
+fi
+
+if [ -z "$CLIENT" ]; then
+  FORCE_ARG=""
+else
+  FORCE_ARG="-c"
 fi
 
 mapps code:push $APP_ID_ARG $REGION_ARG $VERSION_ID_ARG $FORCE_ARG
