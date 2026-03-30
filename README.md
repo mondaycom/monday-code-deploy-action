@@ -42,7 +42,7 @@ jobs:
       
       # Deploy using app ID
       - name: Deploy to monday code
-        uses: mondaycom/monday-code-deploy-action@master
+        uses: mondaycom/monday-code-deploy-action@v2
         with:
           token: ${{ secrets.MONDAY_TOKEN }}
           appId: 10110073
@@ -50,7 +50,7 @@ jobs:
 
       # Or deploy using version ID
       - name: Deploy to specific version
-        uses: mondaycom/monday-code-deploy-action@master
+        uses: mondaycom/monday-code-deploy-action@v2
         with:
           token: ${{ secrets.MONDAY_TOKEN }}
           versionId: 12345678
